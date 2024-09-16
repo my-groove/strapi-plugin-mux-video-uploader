@@ -1,4 +1,4 @@
-import * as authStrategies from '@strapi/admin/server/strategies';
+import { strategies as authStrategies } from '@strapi/admin/strapi-server';
 
 export default async (ctx: any) => {
   const user = await authStrategies.admin.authenticate(ctx);
