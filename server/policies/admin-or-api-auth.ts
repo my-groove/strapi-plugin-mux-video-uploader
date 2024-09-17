@@ -1,3 +1,4 @@
+//@ts-ignore
 import { strategies as authStrategies } from '@strapi/admin/strapi-server';
 
 export default async (ctx: any) => {

@@ -183,17 +183,13 @@ const submitRemoteUpload = async (ctx: Context) => {
   const data = body;
 
   if (!body.url) {
-    ctx.badRequest('ValidationError', {
-      errors: { url: ['url cannot be empty'] },
-    });
+    ctx.badRequest('ValidationError');
 
     return;
   }
 
   if (!body.title) {
-    ctx.badRequest('ValidationError', {
-      errors: { title: ['title cannot be empty'] },
-    });
+    ctx.badRequest('ValidationError');
 
     return;
   }
@@ -214,9 +210,7 @@ const deleteMuxAsset = async (ctx: Context) => {
   const { id, delete_on_mux } = ctx.request.body;
 
   if (!id) {
-    ctx.badRequest('ValidationError', {
-      errors: { id: ['id needs to be defined'] },
-    });
+    ctx.badRequest('ValidationError');
 
     return;
   }
