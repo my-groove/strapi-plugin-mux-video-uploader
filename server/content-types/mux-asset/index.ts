@@ -11,7 +11,7 @@ export = {
   },
   pluginOptions: {
     'content-manager': {
-      visible: false,
+      visible: true,
     },
     'content-type-builder': {
       visible: true,
@@ -49,18 +49,18 @@ export = {
       required: false,
       maxLength: 255,
     },
-    "isReady": {
-      "type": "boolean",
-      "default": false,
-      "required": false
+    isReady: {
+      type: 'boolean',
+      default: false,
+      required: false,
     },
-    "duration": {
-      "type": "decimal",
-      "required": false
+    duration: {
+      type: 'decimal',
+      required: false,
     },
-    "aspect_ratio": {
-      "type": "string",
-      "required": false
+    aspect_ratio: {
+      type: 'string',
+      required: false,
     },
     playback_policy: {
       type: 'enumeration',
