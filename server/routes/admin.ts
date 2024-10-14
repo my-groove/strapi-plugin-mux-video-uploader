@@ -130,6 +130,15 @@ const routes = [
   // Additional routes for Mux Video Uploader
   {
     method: 'GET',
+    path: '/mux-video-uploader/mux-settings/configured',
+    handler: 'mux-settings.isConfiged',
+    config: {
+      policies: [],
+      prefix: false,
+    },
+  },
+  {
+    method: 'GET',
     path: '/mux-video-uploader/playback-token/:playbackId/:type',
     handler: 'mux.playbackToken',
     config: {
