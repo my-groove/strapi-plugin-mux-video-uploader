@@ -18,6 +18,7 @@ const routes = {
           description: 'Create multiple MuxAssets',
           policies: [],
           prefix: false,
+          auth: false,
         },
       },
       {
@@ -28,6 +29,7 @@ const routes = {
           description: 'Submit a remote video for upload',
           policies: [],
           prefix: false,
+          auth: false,
         },
       },
     ],
