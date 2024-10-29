@@ -1,13 +1,12 @@
-//@ts-ignore
-import { strategies as authStrategies } from '@strapi/admin/strapi-server';
+import * as strategies from '@strapi/admin/server/strategies';
 
 export default async (ctx: any) => {
-  const user = await authStrategies.admin.authenticate(ctx);
+  const user = await strategies.admin.authenticate(ctx);
 
   if (user.authenticated) {
     return true;
   } else {
-    const api = await authStrategies['api-token'].authenticate(ctx);
+    const api = await strategies['api-token'].authenticate(ctx);
 
     return api.authenticated;
   }
