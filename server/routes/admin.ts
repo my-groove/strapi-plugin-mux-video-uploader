@@ -10,15 +10,6 @@ const routes = [
   },
   {
     method: 'POST',
-    path: '/mux-video-uploader/submitRemoteUpload',
-    handler: 'mux.submitRemoteUpload',
-    config: {
-      policies: [],
-      prefix: false,
-    },
-  },
-  {
-    method: 'POST',
     path: '/mux-video-uploader/deleteMuxAsset',
     handler: 'mux.deleteMuxAsset',
     config: {
@@ -127,7 +118,6 @@ const routes = [
       prefix: false,
     },
   },
-  // Additional routes for Mux Video Uploader
   {
     method: 'GET',
     path: '/mux-video-uploader/mux-settings/configured',
@@ -143,16 +133,6 @@ const routes = [
     handler: 'mux.playbackToken',
     config: {
       policies: [],
-      prefix: false,
-    },
-  },
-  {
-    method: 'POST',
-    path: '/mux-video-uploader/mux-assets',
-    handler: 'mux-asset.createBulk',
-    config: {
-      policies: ['plugin::mux-video-uploader.adminOrApiAuth'],
-      auth: false,
       prefix: false,
     },
   },
