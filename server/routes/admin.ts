@@ -1,24 +1,6 @@
 const routes = [
   {
     method: 'POST',
-    path: '/mux-video-uploader/submitDirectUpload',
-    handler: 'mux.submitDirectUpload',
-    config: {
-      policies: [],
-      prefix: false,
-    },
-  },
-  {
-    method: 'POST',
-    path: '/mux-video-uploader/deleteMuxAsset',
-    handler: 'mux.deleteMuxAsset',
-    config: {
-      policies: [],
-      prefix: false,
-    },
-  },
-  {
-    method: 'POST',
     path: '/mux-video-uploader/webhook-handler',
     handler: 'mux.muxWebhookHandler',
     config: {
